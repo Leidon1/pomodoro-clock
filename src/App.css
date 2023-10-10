@@ -1,0 +1,103 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.App {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+#timer-label {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#time-left {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ff6600; /* Dark Orange */
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.buttons button {
+  background-color: #ff6600; /* Dark Orange */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.buttons button:hover {
+  background-color: #cc5500; /* Darker Orange on hover */
+}
+
+#break-label,
+#session-label,
+#break-length,
+#session-length {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#break-length,
+#session-length {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 400px) {
+  .App {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #time-left {
+    font-size: 2.5rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons button {
+    margin: 5px 0;
+    padding: 10px 0;
+    width: 100%;
+  }
+}
