@@ -108,6 +108,7 @@ function App() {
   return (
     <div className="app">
       {/* UI elements and components */}
+      <h2 id="h2-element">25+5 Clock</h2>
       <div id="break-label">Break Length</div>
       <div id="session-label">Session Length</div>
       <div id="break-decrement" onClick={decrementBreak}>

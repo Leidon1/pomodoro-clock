@@ -1,103 +1,90 @@
-/* Reset default styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+/* Font definition for the "Digital" font */
+@font-face {
+  font-family: "Digital";
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot");
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix") format("embedded-opentype"),
+       url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2") format("woff2"),
+       url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff") format("woff"),
+       url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf") format("truetype"),
+       url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7") format("svg");
 }
 
-body {
-  background-color: #000;
+.app {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
-}
-
-.App {
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  width: 400px;
-  text-align: center;
+  justify-content: center;
+  gap: 10px;
   padding: 20px;
+  text-align: center;
+  padding-left: 220px;
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+#h2-element {
+  font-family: 'Digital';
+  font-size: 60px;
+  color: #ff8c00; 
+  margin: 0;
+  padding: 20px 0;
+}
+
+#break-label, #session-label {
+  color: #ff8c00;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: 'Digital';
+}
+
+#break-decrement, #break-increment, #session-decrement, #session-increment {
+  background: #ff8c00;
+  color: #000;
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#break-decrement, #break-increment {
+  margin-right: -20px;
+  font-family: 'Digital';
+}
+
+#session-decrement, #session-increment {
+  margin-left: 20px;
+  font-family: 'Digital';
+}
+
+#break-length, #session-length {
+  font-family: 'Digital';
+  font-size: 40px;
+  color: #ff8c00; /* Timer number color */
 }
 
 #timer-label {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #333;
+  color: #ff8c00;
+  font-size: 24px;
+  font-family: 'Digital';
 }
 
 #time-left {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  color: #ff6600; /* Dark Orange */
+  font-family: 'Digital';
+  font-size: 80px;
+  color: #ff8c00;
 }
 
-.buttons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.buttons button {
-  background-color: #ff6600; /* Dark Orange */
-  color: #fff;
-  border: none;
+#start_stop, #reset {
+  background: #ff8c00;
+  font-family: 'Digital';
+  color: #000;
+  font-size: 24px;
   padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
+  border: none;
   border-radius: 5px;
-  transition: background-color 0.2s ease;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
-.buttons button:hover {
-  background-color: #cc5500; /* Darker Orange on hover */
-}
-
-#break-label,
-#session-label,
-#break-length,
-#session-length {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-#break-length,
-#session-length {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-/* Media Query for smaller screens */
-@media (max-width: 400px) {
-  .App {
-    width: 90%;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  #time-left {
-    font-size: 2.5rem;
-  }
-
-  .buttons {
-    flex-direction: column;
-  }
-
-  .buttons button {
-    margin: 5px 0;
-    padding: 10px 0;
-    width: 100%;
-  }
+.audio {
+  display: none;
 }
