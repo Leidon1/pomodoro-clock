@@ -46,12 +46,12 @@
 }
 
 #break-decrement, #break-increment {
-  margin-right: -20px;
+  margin-right: 0px;
   font-family: 'Digital';
 }
 
 #session-decrement, #session-increment {
-  margin-left: 20px;
+  margin-left: 0px;
   font-family: 'Digital';
 }
 
