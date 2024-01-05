@@ -110,21 +110,29 @@ function App() {
       {/* UI elements and components */}
       <h2 id="h2-element">25+5 Clock</h2>
       <div id="break-label">Break Length</div>
-      <div id="session-label">Session Length</div>
-      <div id="break-decrement" onClick={decrementBreak}>
-        Decrement
+
+      <div className="row">
+        <div id="break-decrement" onClick={decrementBreak}>
+          Decrement
+        </div>
+        <div id="break-length">{breakLength}</div>
+        <div id="break-increment" onClick={incrementBreak}>
+          Increment
+        </div>
+      </div><div id="session-label">Session Length</div>
+
+      <div className="row">
+        <div id="session-decrement" onClick={decrementSession}>
+          Decrement
+        </div>
+        <div id="session-length">{sessionLength}</div>
+        <div id="session-increment" onClick={incrementSession}>
+          Increment
+        </div>
       </div>
-      <div id="break-increment" onClick={incrementBreak}>
-        Increment
-      </div>
-      <div id="session-decrement" onClick={decrementSession}>
-        Decrement
-      </div>
-      <div id="session-increment" onClick={incrementSession}>
-        Increment
-      </div>
-      <div id="break-length">{breakLength}</div>
-      <div id="session-length">{sessionLength}</div>
+
+
+
       <div id="timer-label">{timerLabel}</div>
       <div id="time-left">{formatTime(timeLeft)}</div>
       <div id="start_stop" onClick={startStopTimer}>
